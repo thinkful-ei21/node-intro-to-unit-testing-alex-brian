@@ -12,13 +12,11 @@ describe ('num' , function(){
   for (let x = 0; x < testCases.length; x++){
     if(isNaN(testCases[x][0])){
       expect(function() {num(testCases[x][0])}).to.throw(Error);
+      //expect(num(testCases[x][0])).to.throw(Error);
     } else {
       expect(num(testCases[x][0])).to.equal(testCases[x][1]);
     }
   }
-  // expect(num(15)).to.equal('fizz-buzz');
-  // expect(num(3)).to.equal('fizz');
-  // expect(num(5)).to.equal('buzz');
-  // expect(num(7)).to.equal(7);
+  
   });
 });
